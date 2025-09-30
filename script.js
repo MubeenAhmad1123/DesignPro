@@ -195,4 +195,54 @@
                 }, 1600);
             });
         });
-    
+// Hamburger Menu Script
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('primaryMenu');
+  const backdrop = document.querySelector('.menu-backdrop');
+
+  function openMenu() {
+    btn.classList.add('open');
+    menu.classList.add('open');
+    backdrop.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    backdrop.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', () => {
+    if (btn.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // click on backdrop closes menu
+  backdrop.addEventListener('click', closeMenu);
+
+  // click link closes menu
+  menu.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') closeMenu();
+  });
+
+  // esc closes
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  // reset on resize
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMenu();
+  });
+});
+

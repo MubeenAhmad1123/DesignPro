@@ -14,21 +14,33 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-        <div class="logo">DESIGN<span>PRO</span></div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#courses-section">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#trainers">Trainers</a></li>
-            <li><a href="#testimonials">Success Stories</a></li>
-        </ul>
-        <a href="#pricing" class="cta-btn">Join Free Trial</a>
-        <button class="mobile-menu-btn">☰</button>
-    </nav>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="logo"><a href="#home" style="text-decoration: none;">DESIGN<span>PRO</span></a></div>
+
+  <!-- mobile hamburger button -->
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="primaryMenu" aria-expanded="false" aria-label="Open menu">
+    <span class="hamburger" aria-hidden="true"></span>
+  </button>
+
+  <!-- primary menu (keeps same classes you used) -->
+  <div class="menu-wrap" id="primaryMenu" aria-hidden="true">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses-section">Courses</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#testimonials">Success Stories</a></li>
+    </ul>
+
+    <a href="#pricing" class="cta-btn">Join Free Trial</a>
+  </div>
+</nav>
+<div class="menu-backdrop"></div>
+
+
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="home">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>MASTER DESIGN.<br><span class="highlight">LAUNCH YOUR CREATIVE CAREER.</span></h1>
@@ -60,34 +72,43 @@
         </div>
     </section>
 
-    <section class="scroll">
+<section class="scroll">
+  <h1 class="center" id="heading">Designs Our Students Created</h1>
+  <p class="center">Explore the remarkable designs created by our students after completing our courses.</p>
 
-        <h1 class="center" id="heading">Designs Our Students Created</h1>
-        <p class="center">Explore the remarkable designs created by our students after completing our courses.</p>
-
-        <div class="gallery">
-            <!-- Left Column -->
-            <div class="column">
-                <div class="scrolling">
-                    <img src="img/scrool1.png" alt="Left showcase">
-                </div>
-            </div>
-
-            <!-- Center Column -->
-            <div class="column">
-                <div class="scrolling reverse">
-                    <img src="img/scrool2.png" alt="Center showcase">
-                </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="column">
-                <div class="scrolling">
-                    <img src="img/scrool3.png" alt="Right showcase">
-                </div>
-            </div>
+  <div class="gallery">
+    <!-- Left Column -->
+    <div class="column">
+      <div class="scrolling horizontal">
+        <div class="track">
+          <img src="img/scrool1.png" alt="Left showcase">
+          <img src="img/scrool1.png" alt="Left showcase duplicate">
         </div>
-    </section>
+      </div>
+    </div>
+
+    <!-- Center Column -->
+    <div class="column">
+      <div class="scrolling horizontal reverse">
+        <div class="track">
+          <img src="img/scrool2.png" alt="Center showcase">
+          <img src="img/scrool2.png" alt="Center showcase duplicate">
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="column">
+      <div class="scrolling horizontal">
+        <div class="track">
+          <img src="img/scrool3.png" alt="Right showcase">
+          <img src="img/scrool3.png" alt="Right showcase duplicate">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <h2 class="section-header">Why Learn<span class="highlight"> with Us</span>?</h2>
 <p class="section-desc">
    We provide everything you need to succeed in your design journey, from beginner-friendly courses to advanced industry insights.
@@ -279,7 +300,7 @@
                         <div class="old-price">Rs 5,000</div>
                     </div>
 
-                    <div class="card-actions">
+                    <div class="card-actions add-btn" >
                         <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                         </button>
                     </div>
@@ -872,112 +893,73 @@
 </section>
 
     <!-- Testimonials Section -->
-    <div class="testimonial-slider">
-        <section class="Testimonials" id="testimonials">
-            <div class="slider-section">
-                <div class="slider-container">
-                    <div class="slider-wrapper">
-                        <div class="slide">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">This course gave me the confidence to start my own freelance
-                                journey. The mentors were always there to guide and support me through every challenge.
-                            </p>
-                            <div class="author-section">
-                                <div class="author-avatar">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ayesha Khan">
-                                </div>
-                                <div class="author-details">
-                                    <h4>Ayesha Khan</h4>
-                                    <p>Freelance Graphic Designer</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Landing a job at a top software house in Lahore was a dream come
-                                true, and this course made it possible with its practical approach.</p>
-                            <div class="author-section">
-                                <div class="author-avatar">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Bilal Ahmed">
-                                </div>
-                                <div class="author-details">
-                                    <h4>Bilal Ahmed</h4>
-                                    <p>Front-End Developer</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">I learned practical design skills that I use every day in my
-                                career. Highly recommended for beginners looking to break into the industry.</p>
-                            <div class="author-section">
-                                <div class="author-avatar">
-                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sana Malik">
-                                </div>
-                                <div class="author-details">
-                                    <h4>Sana Malik</h4>
-                                    <p>UI/UX Designer</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">Within months, I was able to switch careers and start working in
-                                web development thanks to this comprehensive training program.</p>
-                            <div class="author-section">
-                                <div class="author-avatar">
-                                    <img src="https://randomuser.me/api/portraits/men/54.jpg" alt="Usman Raza">
-                                </div>
-                                <div class="author-details">
-                                    <h4>Usman Raza</h4>
-                                    <p>Web Developer</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">The projects I built during the course impressed employers and
-                                got me interviews quickly. The portfolio was a game-changer.</p>
-                            <div class="author-section">
-                                <div class="author-avatar">
-                                    <img src="https://randomuser.me/api/portraits/women/77.jpg" alt="Fatima Noor">
-                                </div>
-                                <div class="author-details">
-                                    <h4>Fatima Noor</h4>
-                                    <p>Brand Designer</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <div class="quote-icon">"</div>
-                            <p class="testimonial-text">From a student in Multan to a professional working remotely with
-                                clients abroad—this course made it happen for me.</p>
-                            <div class="author-section">
-                                <div class="author-avatar">
-                                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Ali Hassan">
-                                </div>
-                                <div class="author-details">
-                                    <h4>Ali Hassan</h4>
-                                    <p>Freelance Web Designer</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="controls-wrapper">
-                    <button class="nav-btn prev-btn">‹</button>
-                    <div class="dots-container"></div>
-                    <button class="nav-btn next-btn">›</button>
-                </div>
+   <div class="testimonial-slider">
+    <section class="slider-section" id="testimonials">
+      <div class="slider-container">
+        <div class="slider-wrapper">
+          <div class="slide">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">This course gave me the confidence to start my own freelance journey. The mentors were always there to guide and support me through every challenge.</p>
+            <div class="author-section">
+              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""></div>
+              <div class="author-details"><h4>Ayesha Khan</h4><p>Freelance Graphic Designer</p></div>
             </div>
-        </section>
-    </div>
+          </div>
+
+          <div class="slide">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">Landing a job at a top software house in Lahore was a dream come true, and this course made it possible with its practical approach.</p>
+            <div class="author-section">
+              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""></div>
+              <div class="author-details"><h4>Bilal Ahmed</h4><p>Front-End Developer</p></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">I learned practical design skills that I use every day in my career. Highly recommended for beginners looking to break into the industry.</p>
+            <div class="author-section">
+              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt=""></div>
+              <div class="author-details"><h4>Sana Malik</h4><p>UI/UX Designer</p></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">Within months, I was able to switch careers and start working in web development thanks to this comprehensive training program.</p>
+            <div class="author-section">
+              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt=""></div>
+              <div class="author-details"><h4>Usman Raza</h4><p>Web Developer</p></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">The projects I built during the course impressed employers and got me interviews quickly. The portfolio was a game-changer.</p>
+            <div class="author-section">
+              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/77.jpg" alt=""></div>
+              <div class="author-details"><h4>Fatima Noor</h4><p>Brand Designer</p></div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">From a student in Multan to a professional working remotely with clients abroad—this course made it happen for me.</p>
+            <div class="author-section">
+              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/85.jpg" alt=""></div>
+              <div class="author-details"><h4>Ali Hassan</h4><p>Freelance Web Designer</p></div>
+            </div>
+          </div>
+
+        </div> <!-- .slider-wrapper -->
+      </div> <!-- .slider-container -->
+
+      <div class="controls-wrapper" aria-hidden="false">
+        <button class="nav-btn prev-btn" aria-label="Previous">‹</button>
+        <div class="dots-container"></div>
+        <button class="nav-btn next-btn" aria-label="Next">›</button>
+      </div>
+    </section>
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="pricing-box fade-in">
