@@ -7,37 +7,193 @@
     <title>DesignPro Academy - Master Design. Launch Your Career.</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            padding: 4rem 5% 0;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brand h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .footer-brand h3 span {
+            color: #FACC15;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #FACC15;
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-links ul li a:hover {
+            color: #FACC15;
+            padding-left: 5px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form input:focus {
+            border-color: #FACC15;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .newsletter-form input::placeholder {
+            color: #64748b;
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem 1.5rem;
+            background: #FACC15;
+            border: none;
+            border-radius: 8px;
+            color: #0f172a;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #F59E0B;
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            footer {
+                padding: 3rem 5% 0;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navbar -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
-  <div class="logo"><a href="#home" style="text-decoration: none;">DESIGN<span>PRO</span></a></div>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="logo"><a href="#home" style="text-decoration: none;">DESIGN<span>PRO</span></a></div>
 
-  <!-- mobile hamburger button -->
-  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="primaryMenu" aria-expanded="false" aria-label="Open menu">
-    <span class="hamburger" aria-hidden="true"></span>
-  </button>
+        <!-- mobile hamburger button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-controls="primaryMenu" aria-expanded="false" aria-label="Open menu">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
 
-  <!-- primary menu (keeps same classes you used) -->
-  <div class="menu-wrap" id="primaryMenu" aria-hidden="true">
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#courses-section">Courses</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#trainers">Trainers</a></li>
-      <li><a href="#testimonials">Success Stories</a></li>
-    </ul>
+        <!-- primary menu (keeps same classes you used) -->
+        <div class="menu-wrap" id="primaryMenu" aria-hidden="true">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses-section">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#trainers">Trainers</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+            </ul>
 
-    <a href="#pricing" class="cta-btn">Join Free Trial</a>
-  </div>
-</nav>
-<div class="menu-backdrop"></div>
-
-
+            <a href="#pricing" class="cta-btn">Join Free Trial</a>
+        </div>
+    </nav>
+    <div class="menu-backdrop"></div>
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
@@ -72,47 +228,47 @@
         </div>
     </section>
 
-<section class="scroll">
-  <h1 class="center" id="heading">Designs Our Students Created</h1>
-  <p class="center">Explore the remarkable designs created by our students after completing our courses.</p>
+    <section class="scroll">
+        <h1 class="center" id="heading">Designs Our Students Created</h1>
+        <p class="center">Explore the remarkable designs created by our students after completing our courses.</p>
 
-  <div class="gallery">
-    <!-- Left Column -->
-    <div class="column">
-      <div class="scrolling horizontal">
-        <div class="track">
-          <img src="img/scrool1.png" alt="Left showcase">
-          <img src="img/scrool1.png" alt="Left showcase duplicate">
-        </div>
-      </div>
-    </div>
+        <div class="gallery">
+            <!-- Left Column -->
+            <div class="column">
+                <div class="scrolling horizontal">
+                    <div class="track">
+                        <img src="img/scrool1.webp" alt="Left showcase">
+                        <img src="img/scrool1.webp" alt="Left showcase duplicate">
+                    </div>
+                </div>
+            </div>
 
-    <!-- Center Column -->
-    <div class="column">
-      <div class="scrolling horizontal reverse">
-        <div class="track">
-          <img src="img/scrool2.png" alt="Center showcase">
-          <img src="img/scrool2.png" alt="Center showcase duplicate">
-        </div>
-      </div>
-    </div>
+            <!-- Center Column -->
+            <div class="column">
+                <div class="scrolling horizontal reverse">
+                    <div class="track">
+                        <img src="img/scrool2.webp" alt="Center showcase">
+                        <img src="img/scrool2.webp" alt="Center showcase duplicate">
+                    </div>
+                </div>
+            </div>
 
-    <!-- Right Column -->
-    <div class="column">
-      <div class="scrolling horizontal">
-        <div class="track">
-          <img src="img/scrool3.png" alt="Right showcase">
-          <img src="img/scrool3.png" alt="Right showcase duplicate">
+            <!-- Right Column -->
+            <div class="column">
+                <div class="scrolling horizontal">
+                    <div class="track">
+                        <img src="img/scrool3.webp" alt="Right showcase">
+                        <img src="img/scrool3.webp" alt="Right showcase duplicate">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <h2 class="section-header">Why Learn<span class="highlight"> with Us</span>?</h2>
-<p class="section-desc">
-   We provide everything you need to succeed in your design journey, from beginner-friendly courses to advanced industry insights.
-</p>
+    <p class="section-desc">
+        We provide everything you need to succeed in your design journey, from beginner-friendly courses to advanced industry insights.
+    </p>
 
     <!-- Value Bar -->
     <div class="value-bar">
@@ -141,16 +297,13 @@
     </div>
 
     <!-- Courses Section -->
-     <h2 class="section-header">Master Design with Our Top  <span class="highlight">Courses</span></h2>
+    <h2 class="section-header">Master Design with Our Top <span class="highlight">Courses</span></h2>
     <section class="courses-section" id="courses-section">
-
-
-        <!-- GRID container - make sure your course cards are inside this element -->
         <div class="courses">
             <!-- Card 1 -->
             <article class="course-card" data-id="logo">
                 <div class="card-image">
-                    <img src="img/logo-design.png" alt="Logo Design Mega Course">
+                    <img src="img/logo-design.webp" alt="Logo Design Mega Course">
                     <span class="badge featured">Featured</span>
                     <span class="badge discount">75% OFF</span>
                 </div>
@@ -185,7 +338,7 @@
             <!-- Card 2 -->
             <article class="course-card">
                 <div class="card-image">
-                    <img src="img/ai-powered.png" alt="AI Powered Graphic Design">
+                    <img src="img/ai-powered.webp" alt="AI Powered Graphic Design">
                     <span class="badge featured">Featured</span>
                     <span class="badge discount">60% OFF</span>
                 </div>
@@ -216,7 +369,7 @@
             <!-- Card 3 -->
             <article class="course-card">
                 <div class="card-image">
-                    <img src="img/etsy.png" alt="Etsy Digital Product Creation">
+                    <img src="img/etsy.webp" alt="Etsy Digital Product Creation">
                     <span class="badge featured">Featured</span>
                     <span class="badge discount">86% OFF</span>
                 </div>
@@ -247,7 +400,7 @@
             <!-- Card 4 -->
             <article class="course-card">
                 <div class="card-image">
-                    <img src="img/adobe.png" alt="Adobe Illustrator">
+                    <img src="img/adobe.webp" alt="Adobe Illustrator">
                     <span class="badge featured">Recording</span>
                     <span class="badge discount">60% OFF</span>
                 </div>
@@ -278,7 +431,7 @@
             <!-- Card 5 -->
             <article class="course-card">
                 <div class="card-image">
-                    <img src="img/photo-shope.png" alt="Photoshop Recordings">
+                    <img src="img/photo-shope.webp" alt="Photoshop Recordings">
                     <span class="badge featured">Recording</span>
                     <span class="badge discount">60% OFF</span>
                 </div>
@@ -300,24 +453,25 @@
                         <div class="old-price">Rs 5,000</div>
                     </div>
 
-                    <div class="card-actions add-btn" >
-                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    <div class="card-actions">
+                        <button class="add-btn">
+                            <i class="fa-solid fa-cart-shopping"></i> Add to Cart
                         </button>
                     </div>
                 </div>
             </article>
+
             <!-- Card 6 -->
             <article class="course-card">
                 <div class="card-image">
-                    <img src="img/uiux.png" alt="Figma UI/UX Masterclass">
+                    <img src="img/uiux.webp" alt="Figma UI/UX Masterclass">
                     <span class="badge featured">Featured</span>
                     <span class="badge discount">70% OFF</span>
                 </div>
 
                 <div class="card-content">
                     <h3 class="card-title">Figma UI/UX Masterclass</h3>
-                    <p class="card-desc">Learn to design modern and user-friendly interfaces from scratch using Figma.
-                    </p>
+                    <p class="card-desc">Learn to design modern and user-friendly interfaces from scratch using Figma.</p>
 
                     <div class="card-meta meta-row">
                         <span class="meta-item"><i class="fa-regular fa-clock"></i> 18 hours</span>
@@ -339,7 +493,6 @@
                     </div>
                 </div>
             </article>
-
         </div>
     </section>
 
@@ -371,638 +524,483 @@
         </div>
     </section>
 
-
     <!-- About Section -->
-<!-- About section (replace old section) -->
-<section class="about" id="about" aria-label="About DesignPro Academy">
-  <div class="about-content">
+    <section class="about" id="about" aria-label="About DesignPro Academy">
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <h2 class="section-header">Empowering Designers <br> <span class="highlight">Since 2016 </span></h2>
 
-    <!-- LEFT: text + infographic + stats -->
-    <div class="about-text fade-in">
-      <h2 class="section-header">Empowering Designers <br> <span class="highlight">Since 2016 </span></h2>
+                <p class="about-lead">
+                    DesignPro Academy was born from a simple mission: to make world-class design education accessible to everyone.
+                    We believe that creativity should know no boundaries, and that with the right guidance, anyone can master the art of design.
+                </p>
 
-      <p class="about-lead">
-        DesignPro Academy was born from a simple mission: to make world-class design education accessible to everyone.
-        We believe that creativity should know no boundaries, and that with the right guidance, anyone can master the art of design.
-      </p>
+                <div class="infographic" aria-hidden="false">
+                    <div class="infographic-grid">
+                        <div class="infographic-item" role="group" aria-labelledby="i1-title">
+                            <div class="icon yellow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 0 1 1 1v10a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1h3V4a2 2 0 0 1 2-2h4zM9 6V4H7v2h2zm8 0V4h-2v2h2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 id="i1-title" class="infographic-title">Industry-Leading Curriculum</h4>
+                                <p class="infographic-sub">Courses designed by professionals working with top brands worldwide.</p>
+                            </div>
+                        </div>
 
-      <!-- Infographic (three benefits) -->
-      <div class="infographic" aria-hidden="false">
-        <div class="infographic-grid">
-          <div class="infographic-item" role="group" aria-labelledby="i1-title">
-            <div class="icon yellow" aria-hidden="true">
-              <!-- briefcase icon -->
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M10 2h4a2 2 0 0 1 2 2v2h3a1 1 0 0 1 1 1v10a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V7a1 1 0 0 1 1-1h3V4a2 2 0 0 1 2-2h4zM9 6V4H7v2h2zm8 0V4h-2v2h2z"/>
-              </svg>
+                        <div class="infographic-item" role="group" aria-labelledby="i2-title">
+                            <div class="icon blue" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 id="i2-title" class="infographic-title">Practical Learning Approach</h4>
+                                <p class="infographic-sub">Real-world projects that build your portfolio while you learn.</p>
+                            </div>
+                        </div>
+
+                        <div class="infographic-item" role="group" aria-labelledby="i3-title">
+                            <div class="icon green" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M12 2a10 10 0 0 0-10 10v3a3 3 0 0 0 3 3h1v-7a6 6 0 1 1 12 0v7h1a3 3 0 0 0 3-3v-3A10 10 0 0 0 12 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 id="i3-title" class="infographic-title">Ongoing Support</h4>
+                                <p class="infographic-sub">24/7 community support and regular mentor feedback sessions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <span class="stat-num">2,500+</span>
+                        <span class="stat-text">Graduates</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <span class="stat-num">95%</span>
+                        <span class="stat-text">Hired Rate</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <span class="stat-num">8 Years</span>
+                        <span class="stat-text">Years of Excellence</span>
+                    </div>
+                </div>
             </div>
-            <div>
-              <h4 id="i1-title" class="infographic-title">Industry-Leading Curriculum</h4>
-              <p class="infographic-sub">Courses designed by professionals working with top brands worldwide.</p>
+
+            <div class="about-visual fade-in" aria-hidden="true">
+                <div class="about-image-box">
+                    <img src="img/about.webp" alt="About DesignPro Academy">
+                </div>
             </div>
-          </div>
+        </div>
+    </section>
 
-          <div class="infographic-item" role="group" aria-labelledby="i2-title">
-            <div class="icon blue" aria-hidden="true">
-              <!-- pencil / project icon -->
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-              </svg>
+    <section id="countdown-banner" style="background: linear-gradient(135deg, #FACC15 0%, #F59E0B 100%); padding: 3rem 5%; position: relative; overflow: hidden; box-sizing: border-box;">
+        <div style="position: absolute; inset: 0; background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;20&quot; fill=&quot;rgba(255,255,255,0.08)&quot;/></svg>'); background-size: 60px 60px; opacity: 0.28; pointer-events: none;"></div>
+
+        <div style="max-width:1200px;margin:0 auto; text-align:center; position:relative; z-index:2;">
+            <div style="display:inline-block; background: rgba(0,0,0,0.10); padding:0.45rem 1.2rem; border-radius:999px; margin-bottom:1rem;">
+                <span style="color:white; font-weight:700; text-transform:uppercase; letter-spacing:1.6px; font-size:13px;">⚡ Limited Time Offer</span>
             </div>
-            <div>
-              <h4 id="i2-title" class="infographic-title">Practical Learning Approach</h4>
-              <p class="infographic-sub">Real-world projects that build your portfolio while you learn.</p>
+
+            <h2 style="font-family:'Bebas Neue', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; font-size:40px; line-height:1; color:#0b1220; margin:18px 0 8px; letter-spacing:1.6px;">
+                EARLY BIRD DISCOUNT ENDING SOON!
+            </h2>
+
+            <p style="font-family:'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; font-size:17px; color:#0b1220; margin:0 0 1.4rem; font-weight:600;">
+                Join now and save 30% on all courses. This offer won't last!
+            </p>
+
+            <div id="countdown" style="display:flex; justify-content:center; gap:1.1rem; margin:2.4rem 0; flex-wrap:wrap; align-items:center;">
+                <div class="time-box" style="border-radius:16px; padding:1.2rem 1.6rem; min-width:98px; box-shadow:0 8px 20px rgba(2,6,23,0.08); background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div id="days" style="font-family:'Bebas Neue','Poppins',system-ui; font-size:40px; color:#1E3A8A; line-height:1; font-weight:700;">00</div>
+                    <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">Days</div>
+                </div>
+
+                <div class="time-box" style="border-radius:16px; padding:1.2rem 1.6rem; min-width:98px; box-shadow:0 8px 20px rgba(2,6,23,0.08); background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div id="hours" style="font-family:'Bebas Neue','Poppins',system-ui; font-size:40px; color:#1E3A8A; line-height:1; font-weight:700;">00</div>
+                    <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">Hours</div>
+                </div>
+
+                <div class="time-box" style="border-radius:16px; padding:1.2rem 1.6rem; min-width:98px; box-shadow:0 8px 20px rgba(2,6,23,0.08); background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div id="minutes" style="font-family:'Bebas Neue','Poppins',system-ui; font-size:40px; color:#1E3A8A; line-height:1; font-weight:700;">00</div>
+                    <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">Minutes</div>
+                </div>
+
+                <div class="time-box" style="border-radius:16px; padding:1.2rem 1.6rem; min-width:98px; box-shadow:0 8px 20px rgba(2,6,23,0.08); background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div id="seconds" style="font-family:'Bebas Neue','Poppins',system-ui; font-size:40px; color:#1E3A8A; line-height:1; font-weight:700;">00</div>
+                    <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">Seconds</div>
+                </div>
             </div>
-          </div>
 
-          <div class="infographic-item" role="group" aria-labelledby="i3-title">
-            <div class="icon green" aria-hidden="true">
-              <!-- headset / support icon -->
-              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-10 10v3a3 3 0 0 0 3 3h1v-7a6 6 0 1 1 12 0v7h1a3 3 0 0 0 3-3v-3A10 10 0 0 0 12 2z"/>
-              </svg>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:12px;">
+                <a href="#pricing" style="display:inline-block; background: linear-gradient(135deg,#1E3A8A,#3B82F6); color:#fff; padding:12px 28px; border-radius:999px; text-decoration:none; font-weight:700; font-size:16px; box-shadow:0 12px 30px rgba(30,58,138,0.25); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 16px 35px rgba(30,58,138,0.35)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 30px rgba(30,58,138,0.25)'">
+                    Claim Your Discount Now
+                </a>
+
+                <a href="#courses" style="display:inline-block; background:white; color:#1E3A8A; padding:12px 28px; border-radius:999px; text-decoration:none; font-weight:700; font-size:16px; border:2px solid rgba(255,255,255,0.65); transition: all 0.3s ease;" onmouseover="this.style.background='#1E3A8A'; this.style.color='white'; this.style.transform='translateY(-3px)';" onmouseout="this.style.background='white'; this.style.color='#1E3A8A'; this.style.transform='translateY(0)'">
+                    View All Courses
+                </a>
             </div>
-            <div>
-              <h4 id="i3-title" class="infographic-title">Ongoing Support</h4>
-              <p class="infographic-sub">24/7 community support and regular mentor feedback sessions.</p>
-            </div>
-          </div>
+
+            <p style="margin-top:6px; color:#0b1220; font-size:13px; font-weight:600;">
+                ✓ No credit card required &nbsp; ✓ Cancel anytime &nbsp; ✓ 30-day money-back guarantee
+            </p>
         </div>
-      </div>
-
-      <!-- Stats row -->
-      <div class="stats-row">
-        <div class="stat-box">
-          <span class="stat-num">2,500+</span>
-          <span class="stat-text">Graduates</span>
-        </div>
-
-        <div class="stat-box">
-          <span class="stat-num">95%</span>
-          <span class="stat-text">Hired Rate</span>
-        </div>
-
-        <div class="stat-box">
-          <span class="stat-num">8 Years</span>
-          <span class="stat-text">Years of Excellence</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- RIGHT: visual -->
-    <div class="about-visual fade-in" aria-hidden="true">
-      <div class="about-image-box">
-        <img src="img/about.png" alt="About DesignPro Academy">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-<section id="countdown-banner" style="
-  background: linear-gradient(135deg, #FACC15 0%, #F59E0B 100%);
-  padding: 3rem 5%;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-">
-  <!-- decorative dot pattern overlay -->
-  <div style="
-    position: absolute;
-    inset: 0;
-    background-image: url('data:image/svg+xml,<svg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;><circle cx=&quot;30&quot; cy=&quot;30&quot; r=&quot;20&quot; fill=&quot;rgba(255,255,255,0.08)&quot;/></svg>');
-    background-size: 60px 60px;
-    opacity: 0.28;
-    pointer-events: none;
-  "></div>
-
-  <div style="max-width:1200px;margin:0 auto; text-align:center; position:relative; z-index:2;">
-
-    <!-- small pill label -->
-    <div style="
-      display:inline-block;
-      background: rgba(0,0,0,0.10);
-      padding:0.45rem 1.2rem;
-      border-radius:999px;
-      margin-bottom:1rem;
-    ">
-      <span style="color:white; font-weight:700; text-transform:uppercase; letter-spacing:1.6px; font-size:13px;">
-        ⚡ Limited Time Offer
-      </span>
-    </div>
-
-    <!-- heading -->
-    <h2 style="
-      font-family:'Bebas Neue', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
-      font-size:40px;
-      line-height:1;
-      color:#0b1220;
-      margin:18px 0 8px;
-      letter-spacing:1.6px;
-    ">
-      EARLY BIRD DISCOUNT ENDING SOON!
-    </h2>
-
-    <p style="font-family:'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; font-size:17px; color:#0b1220; margin:0 0 1.4rem; font-weight:600;">
-      Join now and save 30% on all courses. This offer won't last!
-    </p>
-
-    <!-- Countdown -->
-    <div id="countdown" style="display:flex; justify-content:center; gap:1.1rem; margin:2.4rem 0; flex-wrap:wrap; align-items:center;">
-
-      <!-- Days -->
-      <div class="time-box" style="
-        border-radius:16px;
-        padding:1.2rem 1.6rem;
-        min-width:98px;
-        box-shadow:0 8px 20px rgba(2,6,23,0.08);
-        background:#fff;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-      ">
-        <div id="days" style="
-          font-family:'Bebas Neue','Poppins',system-ui;
-          font-size:40px;
-          color:#1E3A8A;
-          line-height:1;
-          font-weight:700;
-        ">00</div>
-        <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">
-          Days
-        </div>
-      </div>
-
-      <!-- Hours -->
-      <div class="time-box" style="
-        border-radius:16px;
-        padding:1.2rem 1.6rem;
-        min-width:98px;
-        box-shadow:0 8px 20px rgba(2,6,23,0.08);
-        background:#fff;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-      ">
-        <div id="hours" style="
-          font-family:'Bebas Neue','Poppins',system-ui;
-          font-size:40px;
-          color:#1E3A8A;
-          line-height:1;
-          font-weight:700;
-        ">00</div>
-        <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">
-          Hours
-        </div>
-      </div>
-
-      <!-- Minutes -->
-      <div class="time-box" style="
-        border-radius:16px;
-        padding:1.2rem 1.6rem;
-        min-width:98px;
-        box-shadow:0 8px 20px rgba(2,6,23,0.08);
-        background:#fff;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-      ">
-        <div id="minutes" style="
-          font-family:'Bebas Neue','Poppins',system-ui;
-          font-size:40px;
-          color:#1E3A8A;
-          line-height:1;
-          font-weight:700;
-        ">00</div>
-        <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">
-          Minutes
-        </div>
-      </div>
-
-      <!-- Seconds -->
-      <div class="time-box" style="
-        border-radius:16px;
-        padding:1.2rem 1.6rem;
-        min-width:98px;
-        box-shadow:0 8px 20px rgba(2,6,23,0.08);
-        background:#fff;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-      ">
-        <div id="seconds" style="
-          font-family:'Bebas Neue','Poppins',system-ui;
-          font-size:40px;
-          color:#1E3A8A;
-          line-height:1;
-          font-weight:700;
-        ">00</div>
-        <div style="font-size:12px; color:#6B7280; font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-top:6px;">
-          Seconds
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CTA buttons -->
-<!-- CTA buttons -->
-<div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:12px;">
-  
-  <!-- Primary Button -->
-  <a href="#pricing" style="
-    display:inline-block;
-    background: linear-gradient(135deg,#1E3A8A,#3B82F6);
-    color:#fff;
-    padding:12px 28px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:700;
-    font-size:16px;
-    box-shadow:0 12px 30px rgba(30,58,138,0.25);
-    transition: all 0.3s ease;
-  " 
-  onmouseover="this.style.transform='scale(1.08)'; this.style.boxShadow='0 16px 35px rgba(30,58,138,0.35)'"
-  onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 12px 30px rgba(30,58,138,0.25)'">
-    Claim Your Discount Now
-  </a>
-
-  <!-- Secondary Button -->
-  <a href="#courses" style="
-    display:inline-block;
-    background:white;
-    color:#1E3A8A;
-    padding:12px 28px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:700;
-    font-size:16px;
-    border:2px solid rgba(255,255,255,0.65);
-    transition: all 0.3s ease;
-  " 
-  onmouseover="this.style.background='#1E3A8A'; this.style.color='white'; this.style.transform='translateY(-3px)';"
-  onmouseout="this.style.background='white'; this.style.color='#1E3A8A'; this.style.transform='translateY(0)'">
-    View All Courses
-  </a>
-</div>
-
-
-    <p style="margin-top:6px; color:#0b1220; font-size:13px; font-weight:600;">
-      ✓ No credit card required &nbsp; ✓ Cancel anytime &nbsp; ✓ 30-day money-back guarantee
-    </p>
-  </div>
-</section>
-
-
+    </section>
 
     <!-- Trainers Section -->
-<section id="trainers" class="about-section">
-  <h2 class="section-header">
-    <span class="highlight">Trainers Who </span><br>
-    <span class="since">Empower Creativity</span>
-  </h2>
-</section>
-<section class="instructors">
-  <!-- Ahmad Hassan -->
-  <div class="card">
-    <div class="card-header">
-      <img src="img/ahmad hassan.png" alt="Ahmad Hassan">
-      <div>
-        <h3>Ahmad </h3>
-        <p class="title">Senior Logo Designer & Brand Strategist</p>
-        <div class="stats">
-          <span>⏱ 8+ Years</span>
-          <span>👥 2,500+</span>
-          <span>⭐ 4.9</span>
-        </div>
-      </div>
-    </div>
-    <p class="bio">
-      Former brand designer at top agencies, Ahmad has created logos for Fortune 500 companies. His practical approach helps students understand the business side of design.
-    </p>
-    <div class="card-section">
-      <h4>Specialization</h4>
-      <div class="tags">
-        <span>Logo Design</span>
-        <span>Brand Identity</span>
-      </div>
-    </div>
-    <div class="card-section">
-      <h4>Teaches</h4>
-      <ul>
-        <li>Logo Design Mega Course</li>
-        <li>Brand Identity Masterclass</li>
-      </ul>
-    </div>
-    <div class="card-section">
-      <h4>Key Achievements</h4>
-      <ul>
-        <li>Worked with 200+ international clients</li>
-        <li>Featured in Design Magazine Top 30</li>
-      </ul>
-    </div>
-  </div>
+    <section id="trainers" class="about-section">
+        <h2 class="section-header">
+            <span class="highlight">Trainers Who </span><br>
+            <span class="since">Empower Creativity</span>
+        </h2>
+    </section>
 
-  <!-- Sara Ali -->
-  <div class="card">
-    <div class="card-header">
-      <img src="img/sara ali.png" alt="Sara Ali">
-      <div>
-        <h3>Sara Ali</h3>
-        <p class="title">AI Design Specialist & Creative Technologist</p>
-        <div class="stats">
-          <span>⏱ 6+ Years</span>
-          <span>👥 1,800+</span>
-          <span>⭐ 4.8</span>
+    <section class="instructors">
+        <div class="card">
+            <div class="card-header">
+                <img src="img/ahmad hassan.webp" alt="Ahmad Hassan">
+                <div>
+                    <h3>Ahmad</h3>
+                    <p class="title">Senior Logo Designer & Brand Strategist</p>
+                    <div class="stats">
+                        <span>⏱ 8+ Years</span>
+                        <span>👥 2,500+</span>
+                        <span>⭐ 4.9</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bio">Former brand designer at top agencies, Ahmad has created logos for Fortune 500 companies. His practical approach helps students understand the business side of design.</p>
+            <div class="card-section">
+                <h4>Specialization</h4>
+                <div class="tags">
+                    <span>Logo Design</span>
+                    <span>Brand Identity</span>
+                </div>
+            </div>
+            <div class="card-section">
+                <h4>Teaches</h4>
+                <ul>
+                    <li>Logo Design Mega Course</li>
+                    <li>Brand Identity Masterclass</li>
+                </ul>
+            </div>
+            <div class="card-section">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Worked with 200+ international clients</li>
+                    <li>Featured in Design Magazine Top 30</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <p class="bio">
-      Pioneer in AI-powered design workflows, Sara combines traditional design principles with cutting-edge technology to create innovative solutions.
-    </p>
-    <div class="card-section">
-      <h4>Specialization</h4>
-      <div class="tags">
-        <span>AI Tools</span>
-        <span>Graphic Design</span>
-        <span>Innovation</span>
-      </div>
-    </div>
-    <div class="card-section">
-      <h4>Teaches</h4>
-      <ul>
-        <li>AI HassanPowered Graphic Design Course</li>
-        <li>Future of Design Workshop</li>
-      </ul>
-    </div>
-    <div class="card-section">
-      <h4>Key Achievements</h4>
-      <ul>
-        <li>Early adopter of AI design tools</li>
-        <li>Speaker at 15+ design conferences</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Fatima Khan -->
-  <div class="card">
-    <div class="card-header">
-      <img src="img/fatima khan.png" alt="Fatima Khan">
-      <div>
-        <h3>Fatima Khan</h3>
-        <p class="title">Digital Product Creator & Entrepreneur</p>
-        <div class="stats">
-          <span>⏱ 5+ Years</span>
-          <span>👥 3,200+</span>
-          <span>⭐ 4.9</span>
+        <div class="card">
+            <div class="card-header">
+                <img src="img/sara ali.webp" alt="Sara Ali">
+                <div>
+                    <h3>Sara Ali</h3>
+                    <p class="title">AI Design Specialist & Creative Technologist</p>
+                    <div class="stats">
+                        <span>⏱ 6+ Years</span>
+                        <span>👥 1,800+</span>
+                        <span>⭐ 4.8</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bio">Pioneer in AI-powered design workflows, Sara combines traditional design principles with cutting-edge technology to create innovative solutions.</p>
+            <div class="card-section">
+                <h4>Specialization</h4>
+                <div class="tags">
+                    <span>AI Tools</span>
+                    <span>Graphic Design</span>
+                    <span>Innovation</span>
+                </div>
+            </div>
+            <div class="card-section">
+                <h4>Teaches</h4>
+                <ul>
+                    <li>AI Powered Graphic Design Course</li>
+                    <li>Future of Design Workshop</li>
+                </ul>
+            </div>
+            <div class="card-section">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Early adopter of AI design tools</li>
+                    <li>Speaker at 15+ design conferences</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <p class="bio">
-      Successful Etsy seller with $100K+ in annual revenue from digital products. Fatima teaches the exact strategies she uses to create passive income streams.
-    </p>
-    <div class="card-section">
-      <h4>Specialization</h4>
-      <div class="tags">
-        <span>Etsy</span>
-        <span>Digital Products</span>
-        <span>E-commerce</span>
-      </div>
-    </div>
-    <div class="card-section">
-      <h4>Teaches</h4>
-      <ul>
-        <li>Etsy Digital Product Creation Course</li>
-        <li>Passive Income Mastery</li>
-      </ul>
-    </div>
-    <div class="card-section">
-      <h4>Key Achievements</h4>
-      <ul>
-        <li>Generated $100K+ on Etsy</li>
-        <li>Created 500+ digital products</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Ali Ahmed -->
-  <div class="card">
-    <div class="card-header">
-      <img src="img/ali ahmad.png" alt="Ali Ahmed">
-      <div>
-        <h3>Ali Ahmed</h3>
-        <p class="title">Adobe Certified Expert & Illustrator Specialist</p>
-        <div class="stats">
-          <span>⏱ 10+ Years</span>
-          <span>👥 4,100+</span>
-          <span>⭐ 4.7</span>
+        <div class="card">
+            <div class="card-header">
+                <img src="img/fatima khan.webp" alt="Fatima Khan">
+                <div>
+                    <h3>Fatima Khan</h3>
+                    <p class="title">Digital Product Creator & Entrepreneur</p>
+                    <div class="stats">
+                        <span>⏱ 5+ Years</span>
+                        <span>👥 3,200+</span>
+                        <span>⭐ 4.9</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bio">Successful Etsy seller with $100K+ in annual revenue from digital products. Fatima teaches the exact strategies she uses to create passive income streams.</p>
+            <div class="card-section">
+                <h4>Specialization</h4>
+                <div class="tags">
+                    <span>Etsy</span>
+                    <span>Digital Products</span>
+                    <span>E-commerce</span>
+                </div>
+            </div>
+            <div class="card-section">
+                <h4>Teaches</h4>
+                <ul>
+                    <li>Etsy Digital Product Creation Course</li>
+                    <li>Passive Income Mastery</li>
+                </ul>
+            </div>
+            <div class="card-section">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Generated $100K+ on Etsy</li>
+                    <li>Created 500+ digital products</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <p class="bio">
-      Adobe Certified Expert with extensive experience in vector graphics and illustration. Ali's systematic teaching approach makes complex tools accessible.
-    </p>
-    <div class="card-section">
-      <h4>Specialization</h4>
-      <div class="tags">
-        <span>Adobe Illustrator</span>
-        <span>Vector Graphics</span>
-      </div>
-    </div>
-    <div class="card-section">
-      <h4>Teaches</h4>
-      <ul>
-        <li>Adobe Illustrator Course</li>
-        <li>Vector Graphics Mastery</li>
-      </ul>
-    </div>
-    <div class="card-section">
-      <h4>Key Achievements</h4>
-      <ul>
-        <li>Adobe Certified Expert (ACE)</li>
-        <li>Trained 1000+ corporate employees</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Zain Malik -->
-  <div class="card">
-    <div class="card-header">
-      <img src="img/zain malik.png" alt="Zain Malik">
-      <div>
-        <h3>Zain Malik</h3>
-        <p class="title">Photoshop Master & Digital Artist</p>
-        <div class="stats">
-          <span>⏱ 9+ Years</span>
-          <span>👥 3,800+</span>
-          <span>⭐ 4.8</span>
+        <div class="card">
+            <div class="card-header">
+                <img src="img/ali ahmad.webp" alt="Ali Ahmed">
+                <div>
+                    <h3>Ali Ahmed</h3>
+                    <p class="title">Adobe Certified Expert & Illustrator Specialist</p>
+                    <div class="stats">
+                        <span>⏱ 10+ Years</span>
+                        <span>👥 4,100+</span>
+                        <span>⭐ 4.7</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bio">Adobe Certified Expert with extensive experience in vector graphics and illustration. Ali's systematic teaching approach makes complex tools accessible.</p>
+            <div class="card-section">
+                <h4>Specialization</h4>
+                <div class="tags">
+                    <span>Adobe Illustrator</span>
+                    <span>Vector Graphics</span>
+                </div>
+            </div>
+            <div class="card-section">
+                <h4>Teaches</h4>
+                <ul>
+                    <li>Adobe Illustrator Course</li>
+                    <li>Vector Graphics Mastery</li>
+                </ul>
+            </div>
+            <div class="card-section">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Adobe Certified Expert (ACE)</li>
+                    <li>Trained 1000+ corporate employees</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <p class="bio">
-      Award-winning digital artist specializing in photo manipulation and digital art. Zain's creative techniques have been featured in international publications.
-    </p>
-    <div class="card-section">
-      <h4>Specialization</h4>
-      <div class="tags">
-        <span>Adobe Photoshop</span>
-        <span>Digital Art</span>
-        <span>Photo Manipulation</span>
-      </div>
-    </div>
-    <div class="card-section">
-      <h4>Teaches</h4>
-      <ul>
-        <li>Ultimate Photoshop Course</li>
-        <li>Digital Art Masterclass</li>
-      </ul>
-    </div>
-    <div class="card-section">
-      <h4>Key Achievements</h4>
-      <ul>
-        <li>Winner of Digital Art Competition 2023</li>
-        <li>Work featured in Photoshop Magazine</li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- Imran Ali Dina -->
-  <div class="card">
-    <div class="card-header">
-      <img src="img/imran.jpeg" alt="Imran Ali Dina">
-      <div>
-        <h3>Imran Ali Dina</h3>
-        <p class="title">Web Design Pro | UI/UX Expert</p>
-        <div class="stats">
-          <span>⏱ 10+ Years</span>
+        <div class="card">
+            <div class="card-header">
+                <img src="img/zain malik.webp" alt="Zain Malik">
+                <div>
+                    <h3>Zain Malik</h3>
+                    <p class="title">Photoshop Master & Digital Artist</p>
+                    <div class="stats">
+                        <span>⏱ 9+ Years</span>
+                        <span>👥 3,800+</span>
+                        <span>⭐ 4.8</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bio">Award-winning digital artist specializing in photo manipulation and digital art. Zain's creative techniques have been featured in international publications.</p>
+            <div class="card-section">
+                <h4>Specialization</h4>
+                <div class="tags">
+                    <span>Adobe Photoshop</span>
+                    <span>Digital Art</span>
+                    <span>Photo Manipulation</span>
+                </div>
+            </div>
+            <div class="card-section">
+                <h4>Teaches</h4>
+                <ul>
+                    <li>Ultimate Photoshop Course</li>
+                    <li>Digital Art Masterclass</li>
+                </ul>
+            </div>
+            <div class="card-section">
+                <h4>Key Achievements</h4>
+                <ul>
+                    <li>Winner of Digital Art Competition 2023</li>
+                    <li>Work featured in Photoshop Magazine</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    <p class="bio">
-      10+ years building award-winning websites. Frontend expert and design systems architect.
-    </p>
-    <div class="card-section">
-      <a href="#" class="view-courses">View Courses</a>
-    </div>
-  </div>
-</section>
+
+        <div class="card">
+            <div class="card-header">
+                <img src="img/imran.jpeg" alt="Imran Ali Dina">
+                <div>
+                    <h3>Imran Ali Dina</h3>
+                    <p class="title">Web Design Pro | UI/UX Expert</p>
+                    <div class="stats">
+                        <span>⏱ 10+ Years</span>
+                    </div>
+                </div>
+            </div>
+            <p class="bio">10+ years building award-winning websites. Frontend expert and design systems architect.</p>
+            <div class="card-section">
+                <a href="#" class="view-courses">View Courses</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Testimonials Section -->
-   <div class="testimonial-slider">
-    <section class="slider-section" id="testimonials">
-      <div class="slider-container">
-        <div class="slider-wrapper">
-          <div class="slide">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">This course gave me the confidence to start my own freelance journey. The mentors were always there to guide and support me through every challenge.</p>
-            <div class="author-section">
-              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""></div>
-              <div class="author-details"><h4>Ayesha Khan</h4><p>Freelance Graphic Designer</p></div>
+    <div class="testimonial-slider">
+        <section class="slider-section" id="testimonials">
+            <div class="slider-container">
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">This course gave me the confidence to start my own freelance journey. The mentors were always there to guide and support me through every challenge.</p>
+                        <div class="author-section">
+                            <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt=""></div>
+                            <div class="author-details">
+                                <h4>Ayesha Khan</h4>
+                                <p>Freelance Graphic Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Landing a job at a top software house in Lahore was a dream come true, and this course made it possible with its practical approach.</p>
+                        <div class="author-section">
+                            <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""></div>
+                            <div class="author-details">
+                                <h4>Bilal Ahmed</h4>
+                                <p>Front-End Developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">I learned practical design skills that I use every day in my career. Highly recommended for beginners looking to break into the industry.</p>
+                        <div class="author-section">
+                            <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt=""></div>
+                            <div class="author-details">
+                                <h4>Sana Malik</h4>
+                                <p>UI/UX Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Within months, I was able to switch careers and start working in web development thanks to this comprehensive training program.</p>
+                        <div class="author-section">
+                            <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt=""></div>
+                            <div class="author-details">
+                                <h4>Usman Raza</h4>
+                                <p>Web Developer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The projects I built during the course impressed employers and got me interviews quickly. The portfolio was a game-changer.</p>
+                        <div class="author-section">
+                            <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/77.jpg" alt=""></div>
+                            <div class="author-details">
+                                <h4>Fatima Noor</h4>
+                                <p>Brand Designer</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">From a student in Multan to a professional working remotely with clients abroad—this course made it happen for me.</p>
+                        <div class="author-section">
+                            <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/85.jpg" alt=""></div>
+                            <div class="author-details">
+                                <h4>Ali Hassan</h4>
+                                <p>Freelance Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
 
-          <div class="slide">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">Landing a job at a top software house in Lahore was a dream come true, and this course made it possible with its practical approach.</p>
-            <div class="author-section">
-              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""></div>
-              <div class="author-details"><h4>Bilal Ahmed</h4><p>Front-End Developer</p></div>
+            <div class="controls-wrapper" aria-hidden="false">
+                <button class="nav-btn prev-btn" aria-label="Previous">‹</button>
+                <div class="dots-container"></div>
+                <button class="nav-btn next-btn" aria-label="Next">›</button>
             </div>
-          </div>
+        </section>
 
-          <div class="slide">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">I learned practical design skills that I use every day in my career. Highly recommended for beginners looking to break into the industry.</p>
-            <div class="author-section">
-              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt=""></div>
-              <div class="author-details"><h4>Sana Malik</h4><p>UI/UX Designer</p></div>
+        <!-- Pricing Section -->
+        <section class="pricing" id="pricing">
+            <div class="pricing-box fade-in">
+                <h2>START YOUR DESIGN JOURNEY TODAY</h2>
+                <p>Get access to all courses, mentorship, and career support</p>
+                <span class="price-tag">$999</span>
+                <ul class="price-features">
+                    <li><i class="fas fa-check"></i> Access to all premium courses</li>
+                    <li><i class="fas fa-check"></i> 1-on-1 mentor sessions</li>
+                    <li><i class="fas fa-check"></i> Portfolio review & feedback</li>
+                    <li><i class="fas fa-check"></i> Job placement assistance</li>
+                    <li><i class="fas fa-check"></i> Lifetime community access</li>
+                    <li><i class="fas fa-check"></i> Certificate of completion</li>
+                </ul>
+                <a href="#" class="pricing-cta">Enroll Now - 14 Day Free Trial</a>
             </div>
-          </div>
-
-          <div class="slide">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">Within months, I was able to switch careers and start working in web development thanks to this comprehensive training program.</p>
-            <div class="author-section">
-              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/54.jpg" alt=""></div>
-              <div class="author-details"><h4>Usman Raza</h4><p>Web Developer</p></div>
-            </div>
-          </div>
-
-          <div class="slide">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">The projects I built during the course impressed employers and got me interviews quickly. The portfolio was a game-changer.</p>
-            <div class="author-section">
-              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/women/77.jpg" alt=""></div>
-              <div class="author-details"><h4>Fatima Noor</h4><p>Brand Designer</p></div>
-            </div>
-          </div>
-
-          <div class="slide">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">From a student in Multan to a professional working remotely with clients abroad—this course made it happen for me.</p>
-            <div class="author-section">
-              <div class="author-avatar"><img src="https://randomuser.me/api/portraits/men/85.jpg" alt=""></div>
-              <div class="author-details"><h4>Ali Hassan</h4><p>Freelance Web Designer</p></div>
-            </div>
-          </div>
-
-        </div> <!-- .slider-wrapper -->
-      </div> <!-- .slider-container -->
-
-      <div class="controls-wrapper" aria-hidden="false">
-        <button class="nav-btn prev-btn" aria-label="Previous">‹</button>
-        <div class="dots-container"></div>
-        <button class="nav-btn next-btn" aria-label="Next">›</button>
-      </div>
-    </section>
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="pricing-box fade-in">
-            <h2>START YOUR DESIGN JOURNEY TODAY</h2>
-            <p>Get access to all courses, mentorship, and career support</p>
-            <span class="price-tag">$999</span>
-            <ul class="price-features">
-                <li><i class="fas fa-check"></i> Access to all premium courses</li>
-                <li><i class="fas fa-check"></i> 1-on-1 mentor sessions</li>
-                <li><i class="fas fa-check"></i> Portfolio review & feedback</li>
-                <li><i class="fas fa-check"></i> Job placement assistance</li>
-                <li><i class="fas fa-check"></i> Lifetime community access</li>
-                <li><i class="fas fa-check"></i> Certificate of completion</li>
-            </ul>
-            <a href="#" class="pricing-cta">Enroll Now - 14 Day Free Trial</a>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-brand">
                 <h3>DESIGN<span>PRO</span></h3>
-                <p>Empowering the next generation of creative professionals through practical, industry-focused design
-                    education.</p>
+                <p>Empowering the next generation of creative professionals through practical, industry-focused design education.</p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+
             <div class="footer-links">
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#courses-section">Courses</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#trainers">Trainers</a></li>
                     <li><a href="#testimonials">Success Stories</a></li>
                 </ul>
             </div>
+
             <div class="footer-links">
                 <h4>Support</h4>
                 <ul>
@@ -1013,16 +1011,17 @@
                     <li><a href="#">Contact Support</a></li>
                 </ul>
             </div>
+
             <div class="footer-links">
                 <h4>Newsletter</h4>
-                <p style="color: #9CA3AF; font-size: 14px; margin-bottom: 1rem;">Subscribe for design tips and course
-                    updates</p>
+                <p style="color: #94a3b8; font-size: 14px; margin-bottom: 1rem;">Subscribe for design tips and course updates</p>
                 <form class="newsletter-form">
-                    <input type="email" placeholder="Your email">
+                    <input type="email" placeholder="Your email" required>
                     <button type="submit">Join</button>
                 </form>
             </div>
         </div>
+
         <div class="footer-bottom">
             <p>&copy; 2025 DesignPro Academy. All rights reserved. Crafted with passion for designers.</p>
         </div>
