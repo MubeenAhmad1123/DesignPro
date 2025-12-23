@@ -6,8 +6,7 @@ The focus of this project was motion design, layout polish, and presenting compl
 This project helped me explore advanced UI animations, scroll-based interactions, and conversion-focused layout design.
 
 <b>🚀 Live Demo</b>
-👉 https://your-live-link-here
- (replace with actual link)
+👉https://mubeenahmad1123.github.io/DesignPro/
 
 <b>📌 Features</b>
 
